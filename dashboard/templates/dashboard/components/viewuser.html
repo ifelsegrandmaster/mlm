@@ -1,0 +1,25 @@
+{% load static %}
+<div class="user-details">
+    <img src="{% static 'dashboard/images/user.png' %}">
+    <p><span class="title">Firstname:</span> {{user_profile.first_name}}</p>
+    <p><span class="title">Lastname:</span> {{user_profile.last_name}}</p>
+    <p><span class="title">Country:</span> {{user_profile.country}}</p>
+    <p><span class="title">Phone:</span> {{user_profile.phone}}</p>
+    <p><span class="title">Code:</span>
+      {% if user_profile.is_active %}
+      {{user_profile.code}}
+      {% else %}
+      Contact admin to activate your account
+      {% endif %}
+    </p>
+  </div>
+  <input id="user-id" type="text" style="display:none" , value="{{id}}" />
+  <div class="matrix-container">
+
+    <div class="matrix">
+      <div class="chart" id="matrix"></div>
+      <script>
+        getChildren(document.getElementById("user-id").value);
+      </script>
+    </div>
+  </div>

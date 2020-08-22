@@ -1,0 +1,39 @@
+{% load static %}
+<div class="payments">
+    <div class='tab'>
+      <button id='pending' class='{% if reversed %}tablink {% else %} active {% endif %}'
+        onclick="getPayments('pending')">Pending</button>
+      <button id='completed' class='tablink {% if  reversed %} active {% endif %}'
+        onclick="getPayments('completed')">Completed</button>
+    </div>
+    <table class='pay-table'>
+      <tr class="table-titles">
+        <th>Bank</th>
+        <th>Account number</th>
+        <th>Name</th>
+        <th>Surnname</th>
+        <th>Balance</th>
+        <th>Actions</th>
+        <th></th>
+      </tr>
+      <tr class='space'></tr>
+      {% for payment in payments %}
+      <tr class="t-row" id='row{{payment.pk}}'>
+        <td>{{payment.bank}}</td>
+        <td>{{payment.account}}</td>
+        <td>{{payment.profile.first_name}}</td>
+        <td>{{payment.profile.last_name}}</td>
+        <td>{{payment.profile.balance}}</td>
+        <td class='edit'>
+          {% if reversed %}
+          <a class="view-profile" href="/view/details/{{payment.profile.pk}}">Profile</a>
+          {% else %}
+          <a class="view-profile" href="/view/details/{{payment.profile.pk}}">Profile</a>
+
+          {% endif %}
+        </td>
+        <td class='edit'><button class='done' onclick='paymentDone({{payment.pk}})'>Commit</button></td>
+      </tr>
+      {% endfor %}
+    </table>
+  </div>

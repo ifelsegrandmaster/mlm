@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="en">
+{% load static %}
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>GWAP</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.css">
+  <link href="https://fonts.googleapis.com/css?family=Nunito&display=swap" rel="stylesheet">
+  <script type="text/javascript" src="{% static 'dashboard/treant/Treant.js/' %}"></script>
+  <script type="text/javascript" src="{% static 'dashboard/treant/vendor/raphael.js/' %}"></script>
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <link href="{% static 'dashboard/home.css' %}" rel="stylesheet" />
+  <style>
+    body {
+      background: white;
+    }
+
+    #home {
+      display: none;
+    }
+  </style>
+  <script>
+    function toggler() {
+      var menu = document.querySelector('.nav');
+
+      if (menu.style.display == 'none') {
+        menu.style.display = 'block'
+      } else {
+        menu.style.display = 'none'
+      }
+    }
+  </script>
+
+</head>
+
+<body>
+  <ul class="mobile-menu">
+    <li><a href="{% url 'account_login' %}"> <i class="fas fa-sign-in-alt"></i> Sign in</a></li>
+    <li><a href="{% url 'account_signup' %}"><i class="fas fa-user-plus"></i> Sign up</a></li>
+    <li><a href="#about"><i class="fas fa-info-circle"></i> About this</a></li>
+    <li><a href="#contact"><i class="far fa-id-card"></i> Contact us</a></li>
+  </ul>
+  <input type="checkbox" id="nav-trigger" class="nav-trigger" />
+  <label for="nav-trigger">
+    <?xml version="1.0" encoding="iso-8859-1"?>
+    <!-- Generator: Adobe Illustrator 19.0.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+    <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+      x="0px" y="0px" viewBox="0 0 512 512" style="enable-background:new 0 0 512 512;" xml:space="preserve">
+      <g>
+        <g>
+          <path d="M467.478,322.783h-81.032l-114.76,61.07l-15.687,8.348l-15.687-8.348l-114.758-61.07H44.522
+			C20.035,322.783,0,342.817,0,367.304c0,24.487,20.035,44.522,44.522,44.522h422.957c24.487,0,44.522-20.035,44.522-44.522
+			C512,342.817,491.965,322.783,467.478,322.783z" />
+        </g>
+      </g>
+      <g>
+        <g>
+          <path
+            d="M44.522,445.217C44.522,482.1,74.423,512,111.304,512h289.391c36.882,0,66.783-29.9,66.783-66.783H44.522z" />
+        </g>
+      </g>
+      <g>
+        <g>
+          <path d="M356.174,109.507h-83.478V77.068l83.478-38.535L272.696,0h-33.391v109.507h-83.478
+			c-61.217,0-111.304,50.087-111.304,111.304h422.957C467.478,159.594,417.391,109.507,356.174,109.507z" />
+        </g>
+      </g>
+      <g>
+        <g>
+          <polygon points="44.522,254.202 44.522,287.594 130.507,287.594 256,354.376 381.493,287.594 467.478,287.594 467.478,254.202 		
+			" />
+        </g>
+      </g>
+      <g>
+      </g>
+      <g>
+      </g>
+      <g>
+      </g>
+      <g>
+      </g>
+      <g>
+      </g>
+      <g>
+      </g>
+      <g>
+      </g>
+      <g>
+      </g>
+      <g>
+      </g>
+      <g>
+      </g>
+      <g>
+      </g>
+      <g>
+      </g>
+      <g>
+      </g>
+      <g>
+      </g>
+      <g>
+      </g>
+    </svg>
+  </label>
+  <div class="home">
+    {% include "./components/appcompatbar.html" %}
+    <div class="home-nav" id="home-nav">
+      <div class="logo" data-aos="zoom-in-right">
+        <span>GWAP</span>
+      </div>
+      <div class="home-links">
+        <ul>
+          <li class="signin" data-aos="zoom-in-left"><a href="{% url 'account_login' %}">Sign in</a></li>
+          <li class="signup" data-aos="zoom-in-left"><a href="{% url 'account_signup' %}">Sign up</a></li>
+          <li class="about" data-aos="zoom-in-left"><a href="#about">About this</a></li>
+          <li class="contactus" data-aos="zoom-in-left"><a href="#contact">Contact us</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="home-container">
+      <div class="hero">
+        <div class="hero-image" data-aos="fade-right" data-aos-offset="300" data-aos-easing="ease-in-sine">
+          <img id="moneytalks" src="{% static 'dashboard/images/heroimage.jpg'%}" />
+        </div>
+        <div class="more-desc" data-aos="fade-left">
+          <div class="speech" data-aos="zoom-in" data-aos-duration="1500">
+            <h1>Grow your money today</h1>
+            <p>Invest with us and grow your money today with us</p>
+          </div>
+          <div class="sign-me-up">
+            <a id="s-me-up" href="{% url 'account_signup' %}">Sign up now </a>
+            <p>Get your easy money today while sleeping</p>
+            <p>
+              <a title="Visit our page on facebook" href="https://www.facebook.com/AbantuSoft-103023198010808">
+                <i class="fab fa-facebook"></i>
+              </a>
+              <a title="Chat with us on whatsapp" href="https://wa.me/263782841339/">
+                <i class="fab fa-whatsapp"></i>
+              </a>
+            </p>
+          </div>
+        </div>
+      </div>
+      <div class="about-this" id="about" data-aos="fade-up" data-aos-duration="1500">
+        <div class="illustration" data-aos="fade-right" data-aos-duration="1500">
+          <div id="ill-anim">
+            <h1><i class="fas fa-info-circle"></i></h1>
+            <h1>How it works</h1>
+            <img src="{% static 'dashboard/images/matrix.png' %}" />
+            <p>This is the matrix how people will be connected to each other.
+              This is a full matrix. Here the person at the top is
+              eligible to widthdraw money from the system.
+            </p>
+          </div>
+        </div>
+        <div class="discussion" data-aos="fade-left">
+          <div id="information-a" data-aos="zoom-out" data-aos-duration="1800">
+            <h1>What is it about?</h1>
+            <p>It is about pyramid schemes.</p>
+          </div>
+          <div id="information-b" data-aos="zoom-out" data-aos-duration="1600">
+            <h1>How does it work?</h1>
+            <p>You join and pay a fee of 250RANDS.</p>
+          </div>
+          <div id="information-e" data-aos="zoom-out" data-aos-duration="1400">
+            <h1>What happens next?</h1>
+            <p>You have to make two people join directly under you.
+              Once these people have joined you are now on <b>level one</b>.
+            </p>
+          </div>
+          <div id="information-c" data-aos="zoom-out" data-aos-duration="1200">
+            <h1>what next?</h1>
+            <p>These people have to do the same as you have done. They have to also
+              complete <b>level one</b> so you can complete <b>level two</b>
+            </p>
+          </div>
+          <div id="information-d" data-aos="zoom-out" data-aos-duration="1000">
+            <h1>Widthdraw money.</h1>
+            <p>Once you have widthrawed money. You account is deactivated
+              and you have to open another account to start over again.
+            </p>
+          </div>
+        </div>
+      </div>
+      <div id="subscribe" data-aos="fade-left" data-aos-duration="1500">
+        <h1>Subscribe to our site to get latest news</h1>
+        <form action="{% url 'add_email_address' %}" method="POST">
+          {% csrf_token %}
+          <input type="email" placeholder="someone@somesite.com" name="email" />
+          <input type="submit" value="Subscribe" />
+        </form>
+      </div>
+      <div class="home-footer" data-aos="fade-right" data-aos-duration="1500">
+        <h1><i class="fas fa-map-marker-alt"></i></h1>
+        <h1>How to find us</h1>
+        <p>Address: 4790 Mkoba 12 Gweru, Midlands Zimbabwe</p>
+        <p>Mobile: +263782841339</p>
+        <div id="map">
+
+        </div>
+        <p> Abantusoft &copy; 2020</p>
+      </div>
+    </div>
+  </div>
+  <script>
+    if (/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)) {
+      // some code..
+      var menu = document.querySelector('.nav')
+      menu.style.display = 'none';
+    }
+
+  </script>
+  <script>
+    // Initialize and add the map
+    function initMap() {
+      // The location of Uluru
+      var uluru = { lat: -19.454186, lng: 29.761569 };  //-19.454186, 29.761569
+      // The map, centered at Uluru
+      var map = new google.maps.Map(
+        document.getElementById('map'), { zoom: 4, center: uluru });
+      // The marker, positioned at Uluru
+      var marker = new google.maps.Marker({ position: uluru, map: map });
+    }
+  </script>
+  <script async defer
+    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDErNK1JsaOsGW9r7yy9GA5Z2mgpLajlIE&callback=initMap">
+    </script>
+  <script>
+    AOS.init();
+  </script>
+</body>
+
+</html>

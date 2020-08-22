@@ -1,0 +1,36 @@
+{% load static %}
+<div class='dashboard'>
+    <div class='users'>
+       <div>
+       <h1><span class=''>Users:</span><span class='value' id='users-count'>
+       {{users_count}}</span></h1>
+       <p><span class='act key'></span><span class='unit'>Active:</span><span class='value' id='active'>{{active_count}}</span></p>
+       <p><span class='nonact key'></span><span class='unit'>Not active:</span><span class='value' id='not-active'>{{not_active_count}}</span></p>
+       <p><span class='level1 key'></span><span class='unit'>Completed level 1:</span><span class='value' id='levels-1'>{{level1_count}}</span></p>
+       <p><span class='level2 key'></span><span class='unit'>Completed level 2:</span><span class='value' id='levels-2'>{{level2_count}}</span></p>
+       </div>
+       <div>
+       <canvas width='200' height='200' id='user-profiles'></canvas>
+       </div>
+    </div>
+    <div class='payments'>
+      <div>
+       <h1>Withdrawals:<span class='value' id='withdrawals'>{{withdrawals_count}}</span></h1>
+       <p><span class='pendin key'></span><span class='unit'>Pending withdrawals:</span><span class='value' id='pending-withdrawals'>
+         {{pending_withdrawals_count}}
+       </span></p>
+       <p><span class='complete key'></span><span class='unit'>Completed withdrawals:</span><span class='value' id='completed-withdrawals'>
+          {{completed_withdrawals_count}}
+       </span></p>
+       </div>
+       <div>
+       <canvas width='200' height='200' id='w'></canvas>
+       </div>
+    </div>
+    
+ </div>
+ 
+ 
+ <script>
+   window.setInterval(dashboardHandler, 1000)
+ </script>

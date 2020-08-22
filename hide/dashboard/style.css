@@ -1,0 +1,1400 @@
+*{
+   margin: 0;
+   padding: 0;
+   box-sizing: border-box;
+   font-family: 'Nunito', san-serif;
+   
+}
+
+body{
+  background: url('images/let-there-be-sun.png');
+  font-family: 'Nunito', sans-serif;
+}
+
+.menu-toggler{
+   cursor: pointer;
+   display: none;
+}
+
+.container{
+   display:flex;
+   width:100%;
+   
+}
+
+.toggler{
+   display: none;
+   cursor: pointer;
+   padding: 10px;
+   
+}
+
+* p, li , table{
+
+   font-size: 18px;
+   font-weight: 300;
+}
+
+
+.value{
+   margin: 0 5px;
+}
+
+.copyright a{
+   color: #FFD700;
+
+}
+
+.tandcs{
+   width: 60%;
+   margin: 20px auto;
+   padding: 20px;
+   background-color: #FFF;
+   animation: 1s slidein ;
+   border: 1px solid #ddd;
+}
+
+
+.tandcs h2{
+   margin: 10px 0;
+}
+
+
+
+nav{
+   background: #FFD700;
+   display: flex;
+   padding: 20px 0;
+   box-shadow: 0 2px 4px 0 rgba(0,0,0,0.16),0 2px 10px 0 rgba(0,0,0,0.12) !important;
+}
+nav > div{
+   flex: 1;
+}
+
+nav div ul{
+  list-style-type: none;
+}
+nav div ul li{
+  display: inline;
+  float: right;
+  margin: 0px 10px;
+
+}
+
+.side-nav ul li a{
+  color: white;
+  text-decoration: none;
+  padding: 10px;
+  
+}
+
+.menu ul li a{
+  text-decoration: none;
+  color: black;
+  padding: 10px;
+}
+
+.comp{
+   
+}
+
+.container-comp{
+   width: 80%;
+   margin: 20px auto;
+   background-color: #fff;
+   padding: 20px;
+   border: 1px solid #ddd;
+   animation: 1s slidein;
+}
+
+.about a{
+   color: #FFD700;
+   font-size: 20px;
+   text-decoration: none;
+   border-bottom: #FFD700 solid 2px;
+   font-weight: bolder;
+}
+
+.container-comp ul{
+   margin-left: 30px;
+}
+
+.container-comp h1{
+   margin: 10px;
+}
+
+.container-comp h2{
+   margin: 10px;
+}
+
+
+
+.signout-btn{
+   background: teal;
+   color: white;
+   text-decoration: none;
+   padding: 10px;
+}
+
+nav div ul li:hover{
+
+  
+
+}
+
+.container-comp p{
+   margin: 10px;
+}
+
+.menu {
+   animation: 1s slidein;
+}
+
+
+
+
+
+nav .title{
+  margin-left: 10px;
+  color: black;
+  animation: 1s slidein;
+}
+
+.log, .completion{
+   animation: 1s slidein ;
+}
+
+.side-nav{
+  background: #00001a;
+  color: #fff;
+  width: 20%;
+  height: 100vh;
+  margin: 0;
+  flex: 1;
+  position: fixed;
+  top:0;
+  z-index: 1;
+  
+
+}
+
+.content{
+   flex:4;
+   animation: 1s fadein;
+}
+
+.margin-it{
+   margin-left: 20%;
+}
+
+.side-nav ul li{
+  padding: 10px;
+}
+
+.side-nav ul li a{
+   color: #fff;
+   text-decoration: none;
+}
+
+.side-nav h2{
+   margin: 10px;
+   font-weight: bolder;
+   
+}
+
+.active-tab{
+   background-color: #2E4053;
+}
+
+h1{
+
+}
+
+table{
+   width: 100%;
+   margin: 10px  10px;
+   background: #fff;
+
+}
+
+
+td{
+  padding:10px;
+  margin:0;
+}
+
+th{
+  padding:10px;
+  margin:0;
+}
+
+
+
+tr:nth-child(odd){
+   background: #ddd;
+}
+
+tr:nth-child(even){
+   background: #fff;
+}
+
+.edit{
+  background:transparent;
+}
+
+.edit button{
+   padding: 5px;
+   border:none;
+   margin-left: 10px;
+}
+
+.edit-btn{
+   background-color: #009900;
+}
+
+.activate-btn{
+
+}
+
+
+.signup{
+  
+}
+
+
+.orange{
+   background:#FFD700;
+   color: black;
+}
+
+.blue{
+   background:teal;
+   color: white;
+}
+
+.fas {
+  margin-right: 10px;
+}
+
+.user-details{
+   border-bottom: 1px solid #C3C6B8;
+   margin:20px;
+   padding: 10px;
+   background: #fff;
+
+}
+
+.user-details p{
+   margin: 5px 0;
+}
+
+.user-details .title{
+  font-weight: bold;
+  margin-right: 10px;
+
+}
+
+
+
+
+
+.child-container{
+  flex: 1;
+  position: relative;
+
+}
+
+
+
+
+
+
+
+.grand-child:nth-child(even){
+   margin-left: 10px;
+}
+
+h4{
+   padding: 10px 0;
+
+}
+
+
+.view-profile{
+   background: teal;
+   color: black;
+   text-decoration: none;
+   padding: 5px;
+}
+
+.tab{
+   margin: 10px;
+   background: #fff;
+}
+.tab button{
+   padding: 10px;
+   background-color: #ddd;
+   border: none;
+   outline:0;
+}
+
+.tab .active{
+   background-color: #FFD700;
+}
+
+.done{
+   background: #FFD700;
+   text-decoration: none;
+   padding: 0 5px;
+   border: none;
+   color: black;
+   
+}
+
+
+.payment-form{
+   width: 40%;
+   margin: 20px auto;
+   padding: 20px;
+   background-color: #fff;
+   border: 1px solid #ddd;
+}
+
+.payment-form form{
+    width: 100%;
+    margin: 10px;
+}
+.payment-form form input{
+   display: block;
+   width: 100%;
+   margin: 10px 0;
+   padding: 10px;
+   border: 1px solid #ddd;
+   border-radius: 5px;
+}
+
+
+.payment-form input[type="submit"]{
+   background: #FFD700;
+   border: solid 1px #FFD700;
+   color: black;
+   text-transform: uppercase;
+}
+
+.payment-form form label{
+  display: block;
+  width: 100%;
+  margin: 10px 0;
+
+}
+
+.chart { height: 300px; margin: 20px auto; width: 80%; background-color: #FFF; border: 1px solid #ddd;}
+
+.ml-child p{
+
+   display: block;
+}
+.ml-child img{
+   margin-right: 10px;
+   width: 24px;
+
+}
+
+.ml-child{
+    width: 200px;
+    padding: 10px;
+    border: 1px solid #000;
+    border-radius: 5px;
+    background: #fff;
+}
+
+.collapse-switch{
+   padding: 10px;
+}
+
+.message{
+   width: 80%;
+   margin: 20px auto;
+}
+
+.dashboard{
+   display: block;
+   background: #fff;
+}
+
+.odashboard{
+   display: flex;
+   
+   padding: 20px;
+
+}
+.odashboard > div{
+   flex: 1;
+   margin: 10px;
+   border: 1px solid #ddd;
+}
+
+.dash{
+   background-color: #FFF;
+   
+}
+
+.key{
+   width: 24px;
+   height: 24px;
+   
+   display: inline-block;
+   margin-right: 5px;
+}
+
+.act{
+   background-color: #FFD700;
+}
+.nonact{
+   background-color: purple;
+}
+
+.level1{
+   background-color: #F5B041 ;
+}
+.level2{
+   background-color: teal;
+}
+
+.pendin{
+   background-color: #EB984E;
+}
+.complete{
+   background-color: #82E0AA;
+}
+
+.dashboard .payments, .dashboard .users{
+   display: flex;
+}
+.dashboard .payments div, .dashboard .users div{
+   flex: 1;
+}
+
+
+.dashboard > div{
+  
+  
+  padding: 30px 10px;
+  background: white;
+  margin: 10px;
+  
+  
+   border: 1px solid #ddd;
+}
+
+.payment-count, .profile-count, .remaining-count{
+   color: #fff;
+   text-align: center;
+   padding: 30px 0;
+}
+
+.payment-count p , .profile-count p, .remaining-count > p{
+   font-size: 30px;
+}
+
+
+
+
+
+.completion{
+   background-color: #fff;
+   color: black;
+   text-align: center;
+   padding: 30px 0;
+}
+
+.completion h1{
+   padding: 10px;
+}
+
+.completion canvas{
+   background-color: #fff;
+   margin: 10px;
+}
+.completion p{
+   margin: 10px;
+}
+
+.payment-count{
+  background: orange;
+}
+
+.profile-count{
+  background: green;
+}
+
+.remaining-count{
+  background: teal;
+}
+
+.graph{
+
+  
+  background: #fff;
+  margin: 10px;
+  border: 1px solid #ddd;
+  
+  display: flex;
+  
+}
+
+#user-profiles{
+   
+}
+
+#w{
+   
+}
+.graph canvas{
+    margin:auto;
+    
+
+}
+
+
+.unit{
+   font-weight: bold;
+   
+}
+
+.style-lee{
+   padding: 5px;
+   background: teal;
+   margin:  10px 5px;
+   color: white;
+
+}
+
+.log{
+   background-color: #FFF;
+   padding: 20px;
+}
+
+.log p{
+   padding: 10px;
+
+}
+.log img{
+   padding: 10px;
+}
+
+.graph textarea{
+   width: 100%;
+   border: none;
+}
+
+.tabs{
+  margin: 10px;
+  display: block;
+  background-color: #FFF;
+  width: 100%;
+
+
+}
+
+.tabs *{
+
+   
+}
+
+
+
+
+.tabs > div{
+   display: inline-block;
+}
+
+.tabs form{
+   
+   padding: 0;
+   
+}
+
+
+
+.tabs select{
+   background-color: #ddd;
+   border: none;
+   padding: 10px;
+   display: inline-block;
+   margin: 0 5px;
+}
+
+
+
+.tabs label{
+   display: inline-block;
+   margin: 0 5px;
+}
+
+.tabs .searchme{
+   
+   border:solid 2px teal;
+   display: inline-block;
+   
+   
+}
+
+.tabs input[type='submit']{
+   background: teal;
+   color: white;
+   padding: 1px 5px;
+   display: inline-block;
+   margin: 0;
+}
+.tabs  input[type='search']{
+   padding: 1px 5px;
+   display: inline-block;
+   margin: 0;
+}
+
+
+
+
+
+
+* p, li, input, label, textarea, button, a, td{
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 2em;
+}
+header{
+   background:#FFD700;
+   color: black;
+   margin: 0;
+   text-align: center;
+}
+
+.nav{
+   padding: 20px;
+   color:#fff ;
+   background: black;
+   text-align: center;
+   box-shadow: 0 2px 4px 0 rgba(0,0,0,0.16),0 2px 10px 0 rgba(0,0,0,0.12) !important;
+   display: block;
+   animation: 2s fadein;
+   
+
+}
+.nav ul{
+  list-style-type: none;
+}
+
+.nav ul li{
+  display: inline;
+  margin: 0 10px;
+  padding: 10px;
+  
+}
+
+.nav ul li a{
+   color: #fff;
+   text-decoration: none;
+   
+}
+
+.heading{
+   animation: 3s slidein2;
+   padding: 10px;
+}
+
+.heading a{
+   font-size: 30px;
+}
+
+.nav ul li a:hover{
+   color: #FFD700;
+   border-bottom: 2px solid #FFD700;
+   transition: all ease-in-out 0.2s;
+}
+
+
+@keyframes fadein {
+   from {  opacity:0; }
+   to   { opacity: 1; }
+ }
+
+.hero{
+  width: 100%;
+  height: 100vh;
+  
+  display: flex;
+  box-shadow: 0 2px 4px 0 rgba(0,0,0,0.16),0 2px 10px 0 rgba(0,0,0,0.12) !important;
+  background: url('images/background.jpg');
+  background-position: center;
+  background-size: 100%;
+  color: black;
+  
+}
+
+.hero *{
+   
+}
+
+.hero > div{
+  flex: 1;
+  
+}
+
+.intro{
+  padding: 20px;
+  background: rgba(1,1,1,0.2);
+  margin: 0 auto;
+  animation: 2s slidein2;
+  
+}
+
+.intro h1{
+  font-size: 300%;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+
+.intro *{
+  padding: 10px;
+}
+
+.process {
+   display: grid;
+   grid-template-columns: 1fr 1fr 1fr;
+   color:black;
+   text-align: center;
+}
+
+.process > div{
+   padding: 20px;
+   animation: 2s fadein;
+   
+   
+}
+
+
+
+.underlined{
+   
+   color: black;
+   background: rgba(255, 215, 0, 0.5);
+   border-radius: 10px;
+   display: inline-block;
+   margin: 0 5px;
+}
+
+.process h2{
+   padding: 10px;
+   border-radius: 50%;
+   background-color: white;
+   display: inline-block;
+}
+
+.process ul{
+   list-style-type: none;
+}
+
+.contact{
+  background: rgba(0, 128, 128,0.2);
+  padding: 20px;
+  
+}
+
+.first{
+   background-color: rgba(46, 64, 83,0.5);
+}
+.second{
+   background-color: rgba(235, 152, 78, 0.5);
+}
+.third{
+   background-color: rgba(255, 215, 0, 0.5);
+}
+
+.fab{
+   margin: 0 5px;
+}
+
+.contact *{
+  margin: 10px 0;
+}
+.contact h1{
+  
+  
+  
+}
+
+
+.message{
+   border: solid 1px #ddd;
+   padding: 20px;
+   background-color: #FFF;
+   text-align: center;
+}
+
+
+.contact form{
+  width: 100%;
+  margin: 10px;
+}
+input{
+  border-radius: 1px;
+  border: none;
+  margin: 10px 0;
+  padding: 2px 0;
+}
+ .submit {
+  background: #FFD700;
+}
+.contact form *{
+  display: block;
+  width: 100%;
+}
+
+.about{
+  background: #fff;
+  
+  padding: 50px;
+}
+
+
+.about h1{
+   text-transform: uppercase;
+   text-align: center;
+   margin: 10px;
+}
+.about p{
+   color: #888;
+   text-align: center;
+   margin: 10px;
+}
+
+.copy-floatee{
+   
+   color:  black;
+   width: 100%;
+   background-color: #FFF;
+   padding: 20px;
+   text-align: center;
+   border-top: 1px solid #ddd;
+}
+
+.notice{
+   padding: 10px;
+   background-color: rgb(236, 235, 235);
+   border: 1px solid #FFD700;
+   margin: 10px 0;
+}
+
+.copy-floatee a{
+   color:black;
+}
+
+
+
+.signup{
+  background: transparent;
+  color: #FFD700;
+  text-decoration: none;
+  padding: 20px;
+  margin: 10px 0;
+  display: inline-block;
+  font-weight: bolder;
+  border: 2px solid #FFD700;
+  
+}
+
+@keyframes slidein {
+   from { transform: scaleX(0);  opacity:0; }
+   to   { transform: scaleX(1); opacity: 1; }
+ }
+
+ @keyframes slidein2 {
+   from { transform: scaleX(0) scaleY(0) scaleZ(0);  opacity:0; }
+   to   { transform: scaleX(1) scaleY(1) scaleZ(1); opacity: 1; }
+ }
+
+ .ss{
+    text-align: right;
+ }
+
+ #home{
+    animation: 1s slidein;
+    margin: 10px 0;
+ }
+ #whatwhat{
+    animation: 1s slidein;
+    margin: 10px 0;
+ }
+
+.footer{
+   
+   
+   color: white;
+   background: rgba(0,0,0,1);
+   display: grid;
+   grid-template-columns: 1fr 1fr 1fr;
+   padding: 20px;
+}
+
+.links{
+   background-color: black;
+   color: #FFD700;
+   padding: 10px;
+   border-right: #FFD700 solid 2px;
+}
+
+.copyright{
+   background-color: black;
+   color: #FFD700;
+   padding: 10px;
+   
+}
+
+.copyright p{
+   margin: 10px;
+}
+
+.signup:hover{
+      background: #FFD700;
+      color: black;
+      
+      transition: all ease-in-out 0.6s;
+}
+
+.contactus{
+   background: black;
+   color:  #FFD700;
+   padding: 20px;
+   
+}
+
+
+
+.form form{
+   width: 100%;
+
+}
+.form form *{
+   display: block;
+   
+}
+
+.links p{
+   padding: 10px;
+}
+
+.links h1{
+   padding: 10px;
+}
+
+.form form textarea, input[type='email']{
+   width: 100%;
+   background: transparent;
+   border: 2px solid #FFD700;
+   padding: 0 10px;
+}
+
+.contactus h1{
+   
+}
+
+.form form input[type='submit']{
+     background-color: transparent;
+     color: #FFD700;
+     padding: 5px 10px;
+     border: 2px solid #FFD700;
+}
+.form form input[type='submit']:hover{
+    background: #FFD700;
+    color: black;
+    transition: all ease-in-out 0.3s;
+}
+
+.info{
+   text-align: center;
+}
+
+.tandcs{
+   text-align: center;
+}
+
+.about{
+   
+}
+
+
+
+@media only screen and (max-device-width:900px){
+      .container{
+         display: block;
+         
+         
+      }
+
+      .root{
+         
+      }
+
+      .side-nav{
+         width: 100%;
+         height: initial;
+         position: relative;
+      }
+
+      .side-nav h2{
+         text-align: center;
+      }
+
+      .content{
+         overflow-x: scroll;
+         margin-left: 0;
+         animation: 1s fadein;
+      }
+
+      .content .users, .content .payments {
+         display: block;
+      }
+
+
+      .side-nav ul{
+          text-align: center;
+          list-style-type: none;
+      }
+
+      .tabs select, .tabs label{
+         display: block;
+         width: 80%;
+      }
+
+      .tabs input{
+         display: block;
+         width: 100%;
+      }
+      .tabs .compat{
+         width: 100%;
+         margin: 10px;
+         display: block;
+      }
+
+      .tabs .searchme{
+         width: 80%;
+         margin: 10px auto;
+      }
+
+      .odashboard{
+         display: block;
+      }
+
+     
+
+      nav .menu ul li{
+         float: none;
+         display: block;
+         padding: 10px;
+      }
+
+      nav .menu ul li a{
+         color: white;
+      }
+      nav .title{
+         padding: 10px;
+         text-align: right;
+         position: relative;
+         animation: 1s slidein;
+         font-weight: bolder;
+      }
+
+      .menu{
+         background-color: black;
+         display: none;
+      }
+
+      .toggler{
+         display:block;
+      }
+
+      .container-comp{
+         width: 95%;
+         margin: 10px auto;
+         animation: 1s slidein;
+      }
+
+      .hero{
+         display: block;
+         background-position: center;
+         background-size: auto;
+         height: fit-content;
+
+      }
+
+      .process{
+         display: block;
+      }
+
+      .underlined{
+         
+      }
+
+      .footer{
+         display: block;
+      }
+
+      .links{
+         border: none;
+      }
+
+      .tandcs{
+         width: 95%;
+         margin: 20px auto;
+         padding: 20px;
+         background-color: #FFF;
+         animation: 1s slidein ;
+         border: 1px solid #ddd;
+         padding: 50px;
+      }
+
+      .footer div{
+         margin: 10px;
+      }
+
+      .intro h1{
+         font-size: 600%;
+      }
+
+      .underlined{
+         margin: 5px;
+      }
+
+      .process {
+         display: none;
+      }
+
+      .ss a{
+        display: none;
+      }
+
+      .nav{
+         display: none;
+         padding: 0;
+      }
+
+      .heading a{
+         font-size: 400%;
+         text-align: center;
+         font-weight: bolder;
+      }
+      .heading{
+         
+      }
+
+      .menu-toggler{
+         font-size: 400%;
+         display: block;
+         padding: 10px;
+        
+      }
+      header{
+         margin: 0;
+         padding: 0;
+         
+         width: 100%;
+         z-index: 1;
+      }
+      .about p{
+         font-size: 50px;
+      }
+      .about h1{
+
+      }
+
+      .about a{
+         color: #FFD700;
+         font-size: 50px;
+         text-decoration: none;
+         border-bottom: #FFD700 solid 5px;
+         font-weight: bolder;
+      }
+
+      .about img{
+         width: 100%;
+      }
+      
+      .footer input{
+         font-size: 50px;
+         margin: 20px 0;
+         border: 5px solid #FFD700;
+      }
+      
+
+      .contactus{
+         text-align: center;
+      }
+      .footer .contactus  textarea{
+         font-size: 50px;
+         border: 5px solid #FFD700;
+      }
+
+      .footer .contactus input[type='submit']{
+         font-size: 50px;
+         border: 5px solid #FFD700;
+         width: 100%;
+      }
+      .footer label{
+         font-size: 50px;
+      }
+
+      .footer h2{
+         font-size: 70px;
+      }
+
+      .contactus h1{
+         font-size: 70px;
+      }
+
+      .links{
+         text-align: center;
+      }
+
+      .links p{
+         padding: 10px;
+         margin: 20px;
+         font-size: 50px;
+      }
+      .links p i{
+         padding: 0 30px;
+         display: inline-block;
+      }
+
+      .links h1{
+         font-size: 70px;
+      }
+
+      .copyright{
+         text-align: center;
+         font-size: 50px;
+      }
+
+      .nav ul li a{
+         font-size: 50px;
+         animation: 1s slidein;
+      }
+      .nav ul li{
+         display: block;
+      }
+
+      nav div{
+         display: block;
+         
+      }
+      
+
+      nav .title{
+         display: block;
+         text-align: center;
+         
+      }
+      
+      nav h2{
+         width: 100%;
+         padding: 0;
+      }
+      nav{
+         text-align: center;
+         display: block;
+         padding: 0;
+         width: 100%;
+      }
+
+      nav .toggler{
+         
+         text-align: center;
+         width: 100%;
+         
+         
+      }
+
+      nav .title a{
+         font-size: 400%;
+      }
+
+      nav .toggler i{
+         font-size: 400%;
+      }
+
+      .menu ul li a{
+         font-size: 50px;
+      }
+      
+      .completion canvas{
+         width: 100%;
+         height: auto;
+      }
+      .completion h1{
+         font-size: 70px;
+      }
+      
+      #matrix{
+         width: 100%;
+         height: auto;
+         margin-left: 0;
+         margin-right: 0;
+
+      }
+
+      .ml-child p{
+         font-size: 50px;
+         font-weight: bolder;
+      }
+      body{
+         background-size: 100%;
+      }
+
+      .ml-child img{
+         width: 50px;
+         height: 50px;
+      }
+
+      .side-nav ul li a{
+         font-size: 50px;
+      }
+
+      .side-nav h2{
+         font-size: 70px;
+      }
+
+      .root p , .root input, .root a, .root label, .root select,
+       .root table, .root td, .root td button, .root .tab button{
+         font-size: 50px;
+      }
+      
+
+
+      
+
+
+}
+
+@media screen and (min-width:1390px){
+   .root{
+      width: 1336px;
+      margin: 0 auto;
+   }
+
+
+   .hero{
+      height: 768px;
+   }
+
+   .margin-it{
+      margin-left: 300px;
+   }
+
+   .side-nav{
+      width: 300px;
+
+   }
+
+   
+}

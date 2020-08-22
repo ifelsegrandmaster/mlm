@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>{{user.username}}</title>
+</head>
+<body>
+<div class="container">
+    <div class="user-details">
+        <p><b>User name</b>{{user.username}}</p>
+        <p><b>First name</b>{{user_profile.first_name}}</p>
+        <p><b>Last name</b>{{user_profile.last_name}}</p>
+        <p><b>Level</b>{{user_profile.level}}</p>
+        <p><b>Country</b>{{user_profile.country}}</p>
+        <p><b>Phone</b>{{user_profile.phone}}</p>
+        <p><b>Code</b>{{user_profile.code}}</p>
+    </div>
+    <div class="matrix">
+        <h3>First level</h3>
+        <ul>
+            {% for profile in children %}
+            <li>{{profile.first_name}}</li>
+            {% endfor %}
+        </ul>
+    </div>
+    <div class="matrix">
+        <h3>Second level</h3>
+        <ul>
+            {% for profile in grandchildren %}
+            <li>{{profile.first_name}}</li>
+            {% endfor %}
+        </ul>
+    </div>
+</div>
+
+
+</body>
+</html>

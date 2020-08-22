@@ -1,0 +1,8 @@
+runtime: python
+env: flex
+entrypoint: gunicorn -b :$PORT mlm.wsgi
+beta_settings:
+  cloud_sql_instances: natural-chiller-268212:us-central1:mysql
+
+runtime_config:
+  python_version: 3

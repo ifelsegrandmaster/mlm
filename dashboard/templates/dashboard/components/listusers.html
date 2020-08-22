@@ -1,0 +1,66 @@
+{% load static %}
+
+<div class='tabs'>
+        <label>Activity</label>
+        <select id='activity'>
+            <option value='-1'>All</option>
+            <option value='1'>Active</option>
+            <option value='0'>Not active</option>
+        </select>
+
+        <label>Country</label>
+        <select id='country'>
+            <option value='all'>All</option>
+            {% for key, value in countries.items %}
+            <option value='{{key}}'>{{value}}</option>
+            {% endfor %}
+        </select>
+        <input type='hidden' id='token' value={{token}} />
+        <input type='search' name='search' id='search' placeholder='🔎 Search' />
+        <input type='submit' value='Search' onclick='submitAjax()' />
+</div>
+<div class="list-users">
+<table class="users-table">
+    <tr class='table-titles'>
+        <th>First name</th>
+        <th>Last name</th>
+        <th>Country</th>
+        <th>Phone</th>
+        <th>Level</th>
+        <th>Balance</th>
+        <th>Date joined</th>
+        <th>Action</th>
+        <th></th>
+        <th></th>
+    </tr>
+    <tr class='space'></tr>
+    {% for user in users %}
+    <tr id="row{{user.pk}}" class='table-row'>
+        <td><span class='hidden'>Firstname:</span> {{user.first_name}}</td>
+        <td><span class='hidden'>Lastname:</span> {{user.last_name}}</td>
+        <td><span class='hidden'>Country:</span> {{user.country}}</td>
+        <td><span class='hidden'>Phone:</span> {{user.phone}}</td>
+        <td><span class='hidden'>Level:</span> {{user.level}}</td>
+        <td><span class='hidden'>Balance:</span> {{user.balance}}</td>
+        <td><span class='hidden'>Date joined:</span> {{user.date_joined}}
+        <td class="edit">
+
+
+            {% if user.is_active %}
+            <button id="btn{{user.pk}}" class="activate-btn orange" onclick="activateProfile({{user.pk}})">Deactivate
+            </button>
+            {% else %}
+            <button id="btn{{user.pk}}" class="activate-btn blue" onclick="activateProfile({{ user.pk }})">Activate
+            </button>
+
+            {% endif %}
+        </td>
+        <td class='edit'><a class="view-profile" href="/view/details/{{user.pk}}">Profile</a></td>
+        <td class='edit'><button class='del-btn' onclick="deleteUser({{user.pk}})">Delete</button></td>
+    </tr>
+    {% endfor %}
+</table>
+</div>
+<script type="text/javascript">
+    initSelectors();
+</script>

@@ -1,0 +1,21 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="{% static 'dashboard/send_email.css' %}" rel="stylesheet" />
+    <title>Send email to subscribers</title>
+</head>
+<body>
+    {% include "./components/header.html" %}
+    <div class="container">
+        <h1>Send email to subscribers </h1>
+        <form method="POST">
+            {% csrf_token %}
+            {{ form.as_p }}
+            <p id="submit"><input type="submit" value="Send"/></p>
+        </form>
+    </div>
+</body>
+</html>

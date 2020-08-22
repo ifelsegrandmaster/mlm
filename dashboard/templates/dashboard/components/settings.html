@@ -1,0 +1,31 @@
+{% load static %}
+<div class='socialform'>
+  <form method='post' action=''>
+    <h2>Social links</h2>
+    {% csrf_token %}
+    <div class='xcv'>
+      {{ socialform }}
+    </div>
+    <input type='submit' value='Save' />
+  </form>
+</div>
+
+<div class='admins'>
+  <div class='add-admin-dialog'>
+    <h2>Add administrator</h2>
+    <p id='error-msg'></p>
+    <div class='all-users'>
+      <ul id='user-list'></ul>
+      <button class='finisher' onclick='closeAddAdminDialog()'>Finish</button>
+    </div>
+  </div>
+  <h2>Admins</h2>
+  <p><button class='add-admin' onclick='inflateList()'>Add</button></p>
+  <ul id='admin-list'>
+    {% for admin in admins %}
+    <li id='row{{admin.id}}'><span>{{ admin.profile.first_name }}
+        {{ admin.profile.last_name }}</span><button onclick='fireAdmin({{admin.id}})'>Remove</button></li>
+    {% endfor %}
+  </ul>
+
+</div>

@@ -1,0 +1,65 @@
+{% load static %}
+{% if request.user.profile.is_new == True %}
+<input type='hidden' value={{request.user.id}} id='myid' />
+<script>
+    register()
+</script>
+{% endif %}
+<div class="user-dashboard">
+    <div class='odashboard'>
+        <div class="log user-details">
+            <p><img class='avatar' src="{% static 'dashboard/images/user.png' %}"></p>
+            <div class="user-info-row">
+            <p>Firstname:</p>
+            <p>{{profile.first_name}}</p>
+            </div>
+            <div class="user-info-row">
+            <p>Lastname:</p>
+            <p>{{profile.last_name}}</p>
+            </div>
+            <div class="user-info-row">
+            <p>Country:</p>
+            <p>{{profile.country}}</p>
+            </div>
+            <div class="user-info-row">
+            <p>Phone:</p>
+            <p>{{profile.phone}}</p>
+            </div>
+            <div class="user-info-row">
+                <p>Code:</p>
+                <p>
+                    {% if profile.is_active %}
+                    {{profile.code}}
+                    {% else %}
+                    Contact admin to activate your account
+                    {% endif %}
+                </p>
+            </div>
+            {% if not profile.is_active%}
+            <div class="paynow">
+
+            </div>
+            {% endif %}
+        </div>
+        <div class="completion">
+            <h1>Completion</h1>
+            <input type="hidden" value="{{count}}" id="count">
+            <canvas width="300" height="300" id="completion"></canvas>
+
+            <p class="style-lee">Accummulated fund: <span id='cash'>{{cash}}</span> ZAR</p>
+            <p class="style-lee">Level:<span id='level'>{{level}}<span></p>
+        </div>
+    </div>
+    <input id="user-id" type="text" style="display:none" , value="{{id}}" />
+    <script>
+        userDashboardHandler(document.getElementById("user-id").value);
+    </script>
+    <div class="matrix-container">
+        <div class="matrix">
+            <div class="chart" id="matrix"></div>
+            <script>
+                window.setInterval(getChildren(document.getElementById("user-id").value), 1000)
+            </script>
+        </div>
+    </div>
+</div>

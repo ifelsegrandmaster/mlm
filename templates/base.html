@@ -1,0 +1,32 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>{% block head_title %}{% endblock %}</title>
+  <link href="https://fonts.googleapis.com/css?family=Nunito&display=swap" rel="stylesheet">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link href="{% static 'dashboard/allauth.css' %}" rel="stylesheet" />
+  {% block extra_head %}
+  {% endblock %}
+</head>
+
+<body>
+  {% block body %}
+
+  {% include "header.html" %}
+
+  <div class='root'>
+    {% block content %}
+    {% endblock %}
+  </div>
+  {% endblock %}
+  {% block extra_body %}
+  <div class='copyright'>
+    <p>Copyright &copy; CASHPOINT 2020</p>
+    <p><a href='/tandcs'>Terms and Conditions</a></p>
+  </div>
+  {% endblock %}
+</body>
+
+</html>

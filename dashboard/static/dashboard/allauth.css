@@ -1,0 +1,224 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+    line-height: 1.5em;
+  }
+
+  body{
+    background: rgb(24, 23, 23);
+    color: #fff;
+  }
+
+  
+
+  #big-text {
+    font-size: 25px;
+    font-weight: bold;
+  }
+
+  #small-text {
+    font-size: 18px;
+    font-weight: bold;
+  }
+
+  #logo {
+    text-align: center;
+  }
+
+  header{
+    text-align: center;
+    background: white;
+    color: black;
+    border-bottom: 10px solid #FFD700;
+    padding: 10px;
+  }
+
+
+  .container * {
+    width: 100%;
+  }
+
+  .container a {
+    color: #FFD700;
+    display: inline-block;
+    padding: 10px 0;
+  }
+
+  .container input[type="checkbox"]{
+    display: block;
+    width: fit-content;
+  }
+
+
+
+  .container input,
+  .container button,
+  .container p,
+  .container label {
+    padding: 10px 0;
+    font-size: 18px;
+    display: block;
+  }
+
+  .container button {
+    background: #FFD700;
+    width: fit-content;
+    padding: 10px;
+    /*background: rgb(136, 136, 192);*/
+    border: 3px solid rgb(136, 136, 192);
+    border-bottom: 7px solid rgb(136, 136, 192);
+    color: rgb(136, 136, 192);
+    color: black;
+    font-weight: bolder;
+    border-radius: 5px;
+  }
+
+  .container input {
+    border: 3px solid #ddd;
+    border-radius: 5px;
+    padding: 10px;
+  }
+
+  .container input[type="submit"] {
+    background: linear-gradient(rgb(169, 169, 230), rgb(115, 115, 228));
+    color: white;
+    border: none;
+    border-radius: 5px;
+  }
+
+  .container h1 {
+    padding: 10px 0;
+  }
+
+
+
+  .container {
+    width: 50%;
+    margin: auto;
+  }
+
+  .copyright {
+    text-align: center;
+    padding: 30px;
+    margin-top: 20px;
+  }
+
+  .copyright a {
+    color: #FFD700;
+  }
+
+  @media screen and (max-width: 900px){
+    body{
+    background: rgb(24, 23, 23);
+    color: #fff;
+  }
+
+  header{
+    text-align: center;
+    background: white;
+    color: black;
+    border-bottom: 10px solid #FFD700;
+    padding: 10px;
+  }
+
+ 
+
+  #big-text {
+    font-size: 25px;
+    font-weight: bold;
+  }
+
+  #small-text {
+    font-size: 18px;
+    font-weight: bold;
+  }
+
+  #logo {
+    text-align: center;
+  }
+
+  
+
+
+  .container * {
+    width: 100%;
+  }
+
+  .container a {
+    color: #FFD700;
+    display: inline-block;
+    padding: 10px 0;
+  }
+
+  .container input[type="checkbox"]{
+    display: block;
+    width: fit-content;
+  }
+
+
+
+  .container input,
+  .container button,
+  .container p,
+  .container label {
+    padding: 10px 0;
+    font-size: 18px;
+    display: block;
+  }
+
+  .container button {
+    background: #FFD700;
+    width: 100%;
+    padding: 10px;
+    /*background: rgb(136, 136, 192);*/
+    border: 3px solid rgb(136, 136, 192);
+    border-bottom: 7px solid rgb(136, 136, 192);
+    color: rgb(136, 136, 192);
+    color: black;
+    font-weight: bolder;
+    border-radius: 5px;
+  }
+
+  .container input {
+    border: 3px solid #ddd;
+    border-radius: 5px;
+    padding: 10px;
+  }
+
+  .container input[type="submit"] {
+    background: #FFD700;
+    width: 100%;
+    padding: 10px;
+    /*background: rgb(136, 136, 192);*/
+    border: 3px solid rgb(136, 136, 192);
+    border-bottom: 7px solid rgb(136, 136, 192);
+    color: rgb(136, 136, 192);
+    color: black;
+    font-weight: bolder;
+    border-radius: 5px;
+  }
+
+  .container h1 {
+    padding: 10px 0;
+  }
+
+
+
+  .container {
+    width: 100%;
+    margin: auto;
+    padding: 10px;
+  }
+
+  .copyright {
+    text-align: center;
+    padding: 30px;
+    margin-top: 20px;
+  }
+
+  .copyright a {
+    color: #FFD700;
+  }
+  }

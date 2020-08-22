@@ -1,0 +1,11 @@
+<div class="message">
+    <h1><i class='fas fa-info'></i></h1>
+    <h1>{{title}}</h1>
+    <p>{{message}}</p>
+    {% if success %}
+    <input type='hidden' value='{{request.user.id}}' id='token' />
+    <script>
+        notifyPayment(document.getElementById('token').value)
+    </script>
+    {% endif %}
+</div>

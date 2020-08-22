@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Setup</title>
+    <style>
+         *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+         }
+
+         p,input,a,label{
+            font-size: 18px;
+         }
+
+
+      header{
+         background:#FFD700;
+         color: black;
+         margin: 0;
+         font-family: 'Nunito', san-serif;
+         padding: 20px;
+         text-align: center;
+      }
+
+      .nonfield{
+         color: red;
+         padding: 10px;
+      }
+        .container{
+          width: 40%;
+          margin: 20px auto;
+          font-family: 'Nunito', san-serif;
+          animation: 2s slidein2;
+        }
+
+        .container form{
+           margin: 10px 0;
+        }
+
+        .container form input{
+           width: 100%;
+           padding: 10px;
+           border: 1px solid #ddd;
+           border-radius: 5px;
+           margin: 10px 0;
+        }
+
+        .container form input[type="submit"]{
+           text-transform: uppercase;
+           color: black;
+           background: #FFD700;
+        }
+
+        form select{
+           width: 100%;
+           padding: 10px;
+           border: 1px solid #ddd;
+           border-radius: 5px;
+           margin: 10px 0;
+        }
+        header .nav{
+           display:none;
+        }
+        
+    @keyframes slidein2 {
+   from { transform: scaleX(0) scaleY(0) scaleZ(0);  opacity:0; }
+   to   { transform: scaleX(1) scaleY(1) scaleZ(1); opacity: 1; }
+   }
+
+   .heading{
+     animation:  2s slidein2;
+   }
+
+   @media screen and (max-device-width:900px){
+     .container{
+       width: 90%;
+       margin: 0 auto;
+       font-family: 'Nunito', san-serif;
+       animation:  2s slidein2;
+     }
+     .container input,form, .container button, .container label, .container p, .container a, .container select{
+       font-size: 50px;
+       margin: 15px 0;
+       padding:20px 0;
+     }
+
+     h1{
+        font-size:60px;
+        padding: 20px 0;
+     }
+
+     .heading a{
+       font-size: 70px;
+     }
+
+   }
+    </style>
+    
+</head>
+<body>
+ {% include "header.html" %}
+{% if user_profile %}
+   <p>This user has setup his profile already</p>
+{% else %}
+  <div class="container">
+      <h1>Setup your account</h1>
+      <form method="post" id="#myform">
+          {% csrf_token %}
+          {{form.as_p}}
+
+          <input type="submit" value="Submit"/>
+      </form>
+  </div>
+{% endif %}
+</body>
+</html>

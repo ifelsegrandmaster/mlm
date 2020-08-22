@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>{{active}}</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.css">
+  <link href="https://fonts.googleapis.com/css?family=Nunito&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Dancing+Script&display=swap" rel="stylesheet">
+  <link href="{% static 'dashboard/style.css' %}" rel="stylesheet" />
+  <link href="{% static 'dashboard/treant/Treant.css' %}" rel="stylesheet" />
+  <script type="text/javascript" src="{% static 'dashboard/treant/Treant.js' %}"></script>
+  <script type="text/javascript" src="{% static 'dashboard/treant/vendor/raphael.js' %}"></script>
+  <script type="text/javascript" src="{% static 'dashboard/main.js' %}"></script>
+  {% if request.user.is_staff == True%}
+  <script type='text/javascript' src="{% static 'dashboard/admin.js'%}"></script>
+  {% endif %}
+</head>
+
+<body>
+  
+  {% include "./components/navigation.html" %}
+  <div class='root'>
+    {% include "./components/appcompatbar.html" %}
+    <div class="container">
+      <div class="content {% if request.user.is_staff%} margin-it {% endif %}">
+        {% include "./components/deleteuserdialog.html" %}
+        <!--All the users view-->
+        {% if users %}
+        {% include "./components/listusers.html" %}
+        {% endif %}
+
+        <!--Payments view-->
+        {% if payments %}
+        {% include "./components/payments.html" %}
+        {% endif %}
+
+        <!--Notification box-->
+        {% if message %}
+        {% include "./components/notification.html" %}
+        {% endif %}
+
+        <!--Payment form-->
+        {% if payment_form %}
+        {% include "paymentform.html" %}
+        {% endif %}
+
+        <!--Admin dashboard-->
+        {% if dashboard == "admin" %}
+        {% include "./components/admindashboard.html" %}
+        {% else %}
+        <!--Ordinary user dashboard a.k.a Profile-->
+        {% if dashboard == 'ordinary' %}
+        {% include "./components/userprofile.html" %}
+        {% endif %}
+        {% endif %}
+
+        <!--Admin view user profile-->
+        {% if user_profile %}
+        {% include "./components/viewuser.html" %}
+        {% endif %}
+
+        <!--How it works?-->
+        {% if header %}
+        {% include "./components/howitworks.html"%}
+        {% endif %}
+        {% if socialform %}
+        {% include "./components/settings.html" %}
+        {% endif %}
+      </div>
+    </div>
+    {% if request.user.is_staff %}
+    {% else %}
+    <div class='footer'>
+      <p>Copyright &copy; CASHPOINT 2020</p>
+      <p><a href='/tandcs'>Terms and Conditions</a></p>
+    </div>
+    {% endif %}
+  </div>
+</body>
+
+</html>

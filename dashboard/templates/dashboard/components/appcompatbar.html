@@ -1,0 +1,11 @@
+<div class="mobile-topbar">
+    <div>&nbsp;</div>
+    <div class="u-name">
+        {% if request.user.is_authenticated %}
+        {{request.user.username}}
+        {% else %}
+         <span>GWAP</span>
+        {% endif %}
+    </div>
+    <div id="login-link"><a href="{% url 'account_logout' %}"><i class="fas fa-sign-out-alt"></i></a></div>
+</div>

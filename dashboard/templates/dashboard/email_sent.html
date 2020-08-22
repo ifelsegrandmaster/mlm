@@ -1,0 +1,23 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="{% static 'dashboard/template.css' %}" rel="stylesheet" />
+    <title>Email sent</title>
+</head>
+
+<body>
+    {% include "./components/header.html" %}
+    <div class="container">
+        <div id="note">
+            <h1>Email sent</h1>
+            <p>You email has been successfully sent to your subsribers </p>
+            <a href="/">Go back to home page</a>
+        </div>
+    </div>
+</body>
+
+</html>
